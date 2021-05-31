@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "typescript",
+      "type": "typescript",
+      "tsconfig": "tsconfig.json",
+      "problemMatcher": [
+        "$tsc-watch"
+      ],
+      "option": "watch",
+      "dependsOn": "prisma",
+    },
+    {
+      "type": "npm",
+      "script": "prisma:watch",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "prisma",
+      "detail": "prisma generate --watch"
+    }
+  ]
+}
