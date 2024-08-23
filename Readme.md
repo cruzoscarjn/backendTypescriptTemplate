@@ -1,32 +1,46 @@
-# Typescript starting backend
+# Typescript Starting Backend
 
-This project intends to provide a template for starting a typescript-express backend project from scratch as well as to include all boilerplate required when starting a new project as authorization and authentication features.
+This project intends to provide a template for starting a TypeScript-Express backend project using clean architecture from scratch. It also aims to include all boilerplate required when starting a new project, such as authorization and authentication features.
 
-It includes prisma query builder (Because we want safe type checks on ts) for accessing/modifying database data and knex as database migration tool and auxiliary query builder for specialized tasks.
+## Features
 
-The reason for including knex is because prisma migration tool is not enough for running up and down migrations in a predictive way as well as the prisma raw builder is not as good as knex's is.
+- **Clean Architecture**: Ensures the separation of concerns by organizing the code into layers, making it easier to manage and evolve.
+- **Authorization and Authentication**: Comes pre-equipped with robust mechanisms for managing user access and identity verification.
+- **TypeScript Support**: Leverages TypeScript for type safety, enhancing code quality and developer productivity.
+- **Express Framework**: Utilizes Express, a minimal and flexible Node.js web application framework, to handle HTTP requests efficiently.
 
-For code styling this project uses eslint rules from the standard config, airbnb and typescript-recommended but some rules are overwritten
+## Getting Started
 
-The project include a folder structure based on data entities and REST patterns.
+### Prerequisites
 
-Feel free to clone and modify to your needs.
+- Node.js
+- npm or yarn
 
-## instructions
+### Installation
 
-1. Clone the project
-2. `npm install`
-3. `npm run dev or yarn dev`
+1. Clone and install the repository:
+   ```bash
+   git clone https://github.com/cruzoscarjn/backendTypescriptTemplate.git
 
-For debugging run `npm run debug` or use vscode provided base vsconfig on folder .vscode
+   cd typescript-starting-backend
 
+   npm install
+   ```
+2. Copy `.env.example` and put your values there.
+3. Launch infrastructure 
+  ```bash
+  docker compose up -d
+  ```
+4. Launch dev server
+  ```bash
+  npm run start:dev
+  ```
+  This will launch the backend server on http://localhost:3000 by default.
+ 
 
-## tools
-
-- Prisma (Query builder)
-- Knex (Auxiliary Query builder and migration tool)
-- eslint (linting and format tool)
-- Express (web server)
-- Log4js (logs)
-
-Created by **Oscar Cruz**
+### Tools and Technologies
+* Node.js & Express: For creating the server and handling HTTP requests.
+* TypeScript: For adding static type definitions to JavaScript.
+* Jest: For unit and integration testing.
+* ESLint & Prettier: For ensuring code quality and consistency.
+* Swagger: For documentation
